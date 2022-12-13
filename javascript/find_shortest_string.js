@@ -1,6 +1,14 @@
 function findShortestString(arr) {
-  // type your code here
+  // get the lengths of each string in the array and store in a new array in the same order
+  const strLens = arr.map(el => el.length);
+  // find the minimum value of the lengths
+  const minLen = Math.min(...strLens);
+  // find the index(s) of the minimum value
+  const i = strLens.indexOf(minLen);
+  return arr[i]
 }
+
+findShortestString(['abc', 'b', "ladida", "c"])
 
 if (require.main === module) {
   // add your own tests in here
